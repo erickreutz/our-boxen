@@ -94,8 +94,6 @@ node default {
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::no_network_dsstores
   include osx::software_update
-  include osx::dock::icon_size
-  class { 'osx::dock::icon_size': size => 36 }
 
   # common, useful packages
   package {
