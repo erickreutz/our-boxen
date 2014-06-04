@@ -81,7 +81,6 @@ node default {
       'findutils',
       'gnu-tar',
       'coreutils',
-      "wget"
     ]:
   }
 
