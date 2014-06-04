@@ -47,7 +47,7 @@ class people::erickreutz::config (
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
-  file { "/Users/${my_username}/.gitignore":
+  file { "/Users/${my_username}/.gitconfig":
     ensure => link,
     mode   => '0644',
     target => "${my_sourcedir}/dotfiles/gitconfig",
