@@ -3,6 +3,8 @@ class people::erickreutz::applications {
   include autojump
   include iterm2::dev
   include sizeup
+  include alfred
+  include onepassword
 
   $homebrew_packages = [
     'curl',
