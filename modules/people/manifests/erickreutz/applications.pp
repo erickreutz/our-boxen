@@ -1,7 +1,7 @@
 class people::erickreutz::applications {
   include atom
   include autojump
-  include iterm2::stable
+  include iterm2::dev
   include sizeup
 
   $homebrew_packages = [
