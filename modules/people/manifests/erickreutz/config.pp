@@ -54,13 +54,6 @@ class people::erickreutz::config (
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
-  file { "/Users/${my_username}/.gemrc":
-    ensure => link,
-    mode   => '0644',
-    target => "${my_sourcedir}/dotfiles/gemrc",
-    require => Repository["${my_sourcedir}/dotfiles"],
-  }
-
   file { "/Users/${my_username}/.zshrc":
     ensure => link,
     mode   => '0644',
