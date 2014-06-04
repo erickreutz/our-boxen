@@ -61,3 +61,9 @@ github "xquartz",     "1.1.1"
 # https://github.com/boxen.
 github "atom",        "1.0.0"
 github "osx",         "2.5.0"
+github "autojump",    "1.0.0"
+github "onepassword", "1.1.0"
+github "sizeup",      "0.0.1"
+github "iterm2",      "1.1.1"
+
+mod "property_list_key", "0.2.1", :github_tarball => "glarizza/puppet-property_list_key"
