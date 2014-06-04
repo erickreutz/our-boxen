@@ -24,6 +24,11 @@ GITHUBTARBALL
     dnsmasq (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-dropbox
+  specs:
+    dropbox (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.2.0)
@@ -144,6 +149,7 @@ DEPENDENCIES
   autojump (= 1.0.0)
   boxen (= 3.4.2)
   dnsmasq (= 1.0.1)
+  dropbox (= 1.2.0)
   foreman (= 1.2.0)
   gcc (= 2.0.100)
   git (= 2.3.1)

@@ -5,6 +5,7 @@ class people::erickreutz::applications {
   include sizeup
   include alfred
   include onepassword
+  include dropbox
 
   $homebrew_packages = [
     'curl',
