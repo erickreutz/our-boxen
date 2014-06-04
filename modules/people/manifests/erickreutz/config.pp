@@ -40,20 +40,6 @@ class people::erickreutz::config (
     require => Repository["${my_sourcedir}/oh-my-zsh"],
   }
 
-  file { "/Users/${my_username}/.gitignore":
-    ensure => link,
-    mode   => '0644',
-    target => "${my_sourcedir}/dotfiles/gitignore",
-    require => Repository["${my_sourcedir}/dotfiles"],
-  }
-
-  file { "/Users/${my_username}/.gitconfig":
-    ensure => link,
-    mode   => '0644',
-    target => "${my_sourcedir}/dotfiles/gitconfig",
-    require => Repository["${my_sourcedir}/dotfiles"],
-  }
-
   file { "/Users/${my_username}/.zshrc":
     ensure => link,
     mode   => '0644',
