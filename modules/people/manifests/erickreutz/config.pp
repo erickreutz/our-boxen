@@ -27,10 +27,12 @@ class people::erickreutz::config (
   ####################################
 
   repository { "${my_sourcedir}/oh-my-zsh":
+    ensure => 'origin/HEAD',
     source  => 'robbyrussell/oh-my-zsh',
   }
 
   repository { "${my_sourcedir}/dotfiles":
+    ensure => 'origin/HEAD',
     source  => 'erickreutz/dotfiles',
   }
 
