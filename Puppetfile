@@ -67,5 +67,6 @@ github "sizeup",      "0.0.1"
 github "iterm2",      "1.1.1"
 github "alfred",      "1.1.8"
 github "dropbox",     "1.2.0"
+github "rdio",        "1.0.0"
 
 mod "property_list_key", "0.2.1", :github_tarball => "glarizza/puppet-property_list_key"
