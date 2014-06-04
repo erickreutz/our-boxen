@@ -31,10 +31,6 @@ class people::erickreutz::applications {
     provider => appdmg
   }
 
-  class { 'vlc':
-    version => '2.1.4'
-  }
-
   iterm2::colors { 'Erics Colors':
     ansi_0_color        => [0.0, 0.0, 0.0],
     ansi_1_color        => [0.94901961088180542, 0.46666666865348816, 0.47843137383460999],
