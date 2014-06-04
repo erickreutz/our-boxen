@@ -58,6 +58,7 @@ node default {
   include hub
   include nginx
   include redis
+  include sysctl
   include postgresql
 
   # fail if FDE is not enabled

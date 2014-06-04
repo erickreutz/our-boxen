@@ -7,6 +7,8 @@ class people::erickreutz::applications {
   include onepassword
   include dropbox
   include rdio
+  include slack
+  include vlc
 
   $homebrew_packages = [
     'curl',
@@ -27,6 +29,10 @@ class people::erickreutz::applications {
   package { 'Transmission':
     source   => 'https://transmission.cachefly.net/Transmission-2.83.dmg',
     provider => appdmg
+  }
+
+  class { 'vlc':
+    version => '2.1.4'
   }
 
   iterm2::colors { 'Erics Colors':

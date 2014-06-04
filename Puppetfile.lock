@@ -99,9 +99,19 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (3.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-rdio
   specs:
     rdio (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-redis
+  specs:
+    redis (3.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-repository
@@ -122,6 +132,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -171,12 +186,15 @@ DEPENDENCIES
   osx (= 2.5.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
+  postgresql (= 3.0.0)
   property_list_key (= 0.2.1)
   rdio (= 1.0.0)
+  redis (= 3.0.2)
   repository (= 2.3.0)
   ruby (= 7.3.0)
   sizeup (= 0.0.1)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
+  sysctl (= 1.0.1)
   xquartz (= 1.1.1)
 
