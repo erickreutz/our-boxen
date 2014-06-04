@@ -56,6 +56,9 @@ github "ruby",        "7.3.0"
 github "stdlib",      "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.1.1"
+github "redis",       "3.0.2"
+github "postgresql",  "3.0.0"
+github "sysctl",      "1.0.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
