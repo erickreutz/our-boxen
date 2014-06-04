@@ -42,6 +42,12 @@ class people::erickreutz::config (
     require => Repository["${my_sourcedir}/oh-my-zsh"],
   }
 
+  file { "/Users/${my_username}/.atom":
+    ensure  => link,
+    target  => "${my_sourcedir}/atom",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
   file { "/Users/${my_username}/.zshrc":
     ensure => link,
     mode   => '0644',
