@@ -44,7 +44,7 @@ class people::erickreutz::config (
 
   file { "/Users/${my_username}/.atom":
     ensure  => link,
-    target  => "${my_sourcedir}/atom",
+    target  => "${my_sourcedir}/dotfiles/atom",
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
