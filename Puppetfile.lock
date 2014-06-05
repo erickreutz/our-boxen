@@ -36,6 +36,11 @@ GITHUBTARBALL
     caffeine (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.1)
@@ -262,6 +267,7 @@ DEPENDENCIES
   autojump (= 1.0.0)
   boxen (= 3.4.2)
   caffeine (= 1.0.0)
+  chrome (= 1.1.2)
   dnsmasq (= 1.0.1)
   dropbox (= 1.2.0)
   flux (= 1.0.1)

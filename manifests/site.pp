@@ -97,7 +97,7 @@ node default {
   }
 
   # php
-  class { 'php::global': version => '5.5.9' }
+  # class { 'php::global': version => '5.5.9' }
 
   # common, useful packages
   package {
