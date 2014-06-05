@@ -5,6 +5,6 @@ class projects::modnotebooks {
     postgresql  => true,
     redis       => true,
     nginx       => true,
-    source      => 'erickreutz/mod-rails'
+    source      => 'git@bitbucket.org:erickreutz/mod-web.git'
   }
 }
