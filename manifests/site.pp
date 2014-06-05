@@ -84,6 +84,12 @@ node default {
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
 
+  ruby_gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    version      => '~> 1.5',
+    ruby_version => '*',
+  }
+
   # php
   class { 'php::global': version => '5.4.10' }
 
