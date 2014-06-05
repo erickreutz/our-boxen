@@ -80,6 +80,10 @@ node default {
 
   class { 'nodejs::global': version => 'v0.10.0' }
 
+  nodejs::module { 'bower':
+    node_version => 'v0.10'
+  }
+
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
