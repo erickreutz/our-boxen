@@ -9,6 +9,7 @@ class people::erickreutz::applications {
   include rdio
   include slack
   include vlc
+  include skype
 
   $homebrew_packages = [
     'curl',
