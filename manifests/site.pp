@@ -85,7 +85,8 @@ node default {
   ruby::version { '2.1.1': }
 
   # php
-  class { 'php::global': version => '5.5.9' }
+  include php::5_5
+  # class { 'php::global': version => '5.5.9' }
 
   # common, useful packages
   package {
