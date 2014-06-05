@@ -59,6 +59,11 @@ node default {
   include nginx
   include redis
   include sysctl
+  include autoconf
+  include libtool
+  include pkgconfig
+  include pcre
+  include libpng
   include postgresql
   include mysql
 
