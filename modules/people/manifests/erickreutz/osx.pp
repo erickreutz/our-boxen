@@ -16,4 +16,20 @@ class people::erickreutz::osx {
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::no_network_dsstores
   include osx::software_update
+
+  exec { "set computer name":
+    command => 'sudo scutil --set ComputerName "ericsmba"'
+  }
+
+  exec { "set host name":
+    command => 'sudo scutil --set HostName "ericsmbp"'
+  }
+
+  exec { "set local host name":
+    command => 'sudo scutil --set LocalHostName "ericsmbp"'
+  }
+
+  exec { "set samba name":
+    command => 'sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmbp"'
+  }
 }
