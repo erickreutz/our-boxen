@@ -66,6 +66,7 @@ github "libtool",     "1.0.0"
 github "pkgconfig",   "1.0.0"
 github "pcre",        "1.0.0"
 github "libpng",      "1.0.0"
+github "wget",        "1.0.1"
 github "php",         "1.2.3"
 
 # Optional/custom modules. There are tons available at

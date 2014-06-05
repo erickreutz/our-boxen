@@ -12,7 +12,6 @@ class people::erickreutz::applications {
 
   $homebrew_packages = [
     'curl',
-    'wget',
     'zsh',
     'imagemagick'
   ]

@@ -64,6 +64,7 @@ node default {
   include pkgconfig
   include pcre
   include libpng
+  include wget
   include postgresql
   include mysql
 
