@@ -99,8 +99,6 @@ node default {
   # php
   # class { 'php::global': version => '5.5.9' }
 
-  include projects::all
-
   # common, useful packages
   package {
     [
