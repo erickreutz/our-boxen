@@ -18,18 +18,22 @@ class people::erickreutz::osx {
   include osx::software_update
 
   exec { "set computer name":
-    command => 'sudo scutil --set ComputerName "ericsmba"'
+    command => 'sudo scutil --set ComputerName "ericsmba"',
+    user => root
   }
 
   exec { "set host name":
-    command => 'sudo scutil --set HostName "ericsmbp"'
+    command => 'sudo scutil --set HostName "ericsmbp"',
+    user => root
   }
 
   exec { "set local host name":
-    command => 'sudo scutil --set LocalHostName "ericsmbp"'
+    command => 'sudo scutil --set LocalHostName "ericsmbp"',
+    user => root
   }
 
   exec { "set samba name":
-    command => 'sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmbp"'
+    command => 'sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmbp"',
+    user => root
   }
 }
