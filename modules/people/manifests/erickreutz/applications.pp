@@ -18,6 +18,8 @@ class people::erickreutz::applications {
   include notational_velocity
   include caffeine
   include googledrive
+  include chrome
+  include chrome::canary
 
   $homebrew_packages = [
     'curl',
