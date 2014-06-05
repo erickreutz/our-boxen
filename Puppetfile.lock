@@ -161,6 +161,11 @@ GITHUBTARBALL
     sizeup (0.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-skype
+  specs:
+    skype (1.0.8)
+
+GITHUBTARBALL
   remote: boxen/puppet-slack
   specs:
     slack (1.0.5)
@@ -247,6 +252,7 @@ DEPENDENCIES
   repository (= 2.3.0)
   ruby (= 8.0.3)
   sizeup (= 0.0.1)
+  skype (= 1.0.8)
   slack (= 1.0.5)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)

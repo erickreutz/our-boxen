@@ -10,6 +10,14 @@ class people::erickreutz::applications {
   include slack
   include vlc
   include skype
+  include flux::beta
+  include mplayerx
+  include heroku
+  include sequel_pro
+  include spotify
+  include notational_velocity
+  include caffeine
+  include googledrive
 
   $homebrew_packages = [
     'curl',
@@ -29,6 +37,10 @@ class people::erickreutz::applications {
   package { 'Transmission':
     source   => 'https://transmission.cachefly.net/Transmission-2.83.dmg',
     provider => appdmg
+  }
+
+  heroku::plugin { 'accounts':
+    source => 'ddollar/heroku-accounts'
   }
 
   iterm2::colors { 'Erics Colors':
