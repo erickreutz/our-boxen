@@ -17,23 +17,125 @@ class people::erickreutz::osx {
   include osx::no_network_dsstores
   include osx::software_update
 
-  exec { "set computer name":
-    command => 'sudo scutil --set ComputerName "ericsmba"',
+  exec { "Disable the sound effects on boot":
+    command => 'sudo nvram SystemAudioVolume=" "',
     user => root
   }
 
-  exec { "set host name":
-    command => 'sudo scutil --set HostName "ericsmbp"',
+  exec { "Menu bar: show remaining battery percentage":
+    command => 'defaults write com.apple.menuextra.battery ShowPercent -string "YES"'
+  }
+
+  exec { "Menu bar: hide remaining battery time":
+    command => 'defaults write com.apple.menuextra.battery ShowTime -string "NO"'
+  }
+
+  # Set computer name (as done via System Preferences → Sharing)
+
+  exec { "Set computer name (as done via System Preferences → Sharing)":
+    command => 'sudo scutil --set ComputerName "ericsmba" \
+              && sudo scutil --set HostName "ericsmba" \
+              && sudo scutil --set LocalHostName "ericsmba" \
+              && sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmba"',
     user => root
   }
 
-  exec { "set local host name":
-    command => 'sudo scutil --set LocalHostName "ericsmbp"',
-    user => root
+  exec { "Set sidebar icon size to medium":
+    command => 'defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2'
   }
 
-  exec { "set samba name":
-    command => 'sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmbp"',
-    user => root
+  exec { "Increase window resize speed for Cocoa applications":
+    command => 'defaults write NSGlobalDomain NSWindowResizeTime -float 0.001'
+  }
+
+  exec { "Save to disk (not to iCloud) by default":
+    command => 'defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false'
+  }
+
+  exec { "Automatically quit printer app once the print jobs complete":
+    command => 'defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true'
+  }
+
+  exec { "Disable Resume system-wide":
+    command => "defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false"
+  }
+
+  exec { "Disable automatic termination of inactive apps":
+    command => "defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true"
+  }
+
+  exec { "Disable the crash reporter":
+    command => 'defaults write com.apple.CrashReporter DialogType -string "none"'
+  }
+
+  exec { "Restart automatically if the computer freezes":
+    command => "systemsetup -setrestartfreeze on"
+  }
+
+  exec { "Never go into computer sleep mode":
+    command => "systemsetup -setcomputersleep Off > /dev/null"
+  }
+
+  exec { "Trackpad: enable tap to click for this user and for the login screen":
+    command => "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true \
+                && defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1 \
+                && defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1"
+  }
+
+  exec { "Set a blazingly fast keyboard repeat rate":
+    command => "defaults write NSGlobalDomain KeyRepeat -int 0"
+  }
+
+  exec { "Automatically illuminate built-in MacBook keyboard in low light":
+    command => "defaults write com.apple.BezelServices kDim -bool true"
+  }
+
+  exec { "Turn off keyboard illumination when computer is not used for 5 minutes":
+    command => "defaults write com.apple.BezelServices kDimTime -int 300"
+  }
+
+  exec { "Require password immediately after sleep or screen saver begins":
+    command => "defaults write com.apple.screensaver askForPassword -int 1 \
+                && defaults write com.apple.screensaver askForPasswordDelay -int 0"
+  }
+
+  exec { "Save screenshots to the desktop":
+    command => 'defaults write com.apple.screencapture location -string "${HOME}/Desktop"'
+  }
+
+  exec { "Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)":
+    command => 'defaults write com.apple.screencapture type -string "png"'
+  }
+
+  exec { "Disable shadow in screenshots":
+    command => defaults write com.apple.screencapture disable-shadow -bool true
+  }
+
+  exec { "Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons":
+    command => "defaults write com.apple.finder QuitMenuItem -bool true"
+  }
+
+  exec { "Finder: disable window animations and Get Info animations":
+    command => "defaults write com.apple.finder DisableAllAnimations -bool true"
+  }
+
+  exec { "Finder: show hidden files by default":
+    command => "defaults write com.apple.finder AppleShowAllFiles -bool true"
+  }
+
+  exec { "Finder: show all filename extensions":
+    command => "defaults write NSGlobalDomain AppleShowAllExtensions -bool true"
+  }
+
+  exec { "Finder: show status bar":
+    command => "defaults write com.apple.finder ShowStatusBar -bool true"
+  }
+
+  exec { "Finder: show path bar":
+    command => "defaults write com.apple.finder ShowPathbar -bool true"
+  }
+
+  exec { "Finder: allow text selection in Quick Look":
+    command => "defaults write com.apple.finder QLEnableTextSelection -bool true"
   }
 }
