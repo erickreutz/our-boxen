@@ -151,7 +151,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: erickreutz/puppet-postgresql
   specs:
-    postgresql (3.0.0)
+    postgresql (3.0.1)
 
 GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
@@ -196,7 +196,7 @@ DEPENDENCIES
   osx (= 2.5.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
-  postgresql (= 3.0.0)
+  postgresql (= 3.0.1)
   property_list_key (= 0.2.1)
   rdio (= 1.0.0)
   redis (= 3.0.2)
