@@ -31,6 +31,11 @@ GITHUBTARBALL
     boxen (3.4.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-caffeine
+  specs:
+    caffeine (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.1)
@@ -39,6 +44,11 @@ GITHUBTARBALL
   remote: boxen/puppet-dropbox
   specs:
     dropbox (1.2.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-flux
+  specs:
+    flux (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -59,6 +69,16 @@ GITHUBTARBALL
   remote: boxen/puppet-go
   specs:
     go (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-googledrive
+  specs:
+    googledrive (1.0.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-heroku
+  specs:
+    heroku (2.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
@@ -86,6 +106,11 @@ GITHUBTARBALL
     libtool (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-mplayerx
+  specs:
+    mplayerx (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-mysql
   specs:
     mysql (1.2.0)
@@ -99,6 +124,11 @@ GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (3.7.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-notational_velocity
+  specs:
+    notational_velocity (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
@@ -156,6 +186,11 @@ GITHUBTARBALL
     ruby (8.0.3)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sequel_pro
+  specs:
+    sequel_pro (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sizeup
   specs:
     sizeup (0.0.1)
@@ -169,6 +204,11 @@ GITHUBTARBALL
   remote: boxen/puppet-slack
   specs:
     slack (1.0.5)
+
+GITHUBTARBALL
+  remote: boxen/puppet-spotify
+  specs:
+    spotify (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -221,12 +261,16 @@ DEPENDENCIES
   autoconf (= 1.0.0)
   autojump (= 1.0.0)
   boxen (= 3.4.2)
+  caffeine (= 1.0.0)
   dnsmasq (= 1.0.1)
   dropbox (= 1.2.0)
+  flux (= 1.0.1)
   foreman (= 1.2.0)
   gcc (= 2.0.100)
   git (= 2.3.1)
   go (= 1.1.0)
+  googledrive (= 1.0.2)
+  heroku (= 2.0.0)
   homebrew (= 1.9.2)
   hub (= 1.3.0)
   inifile (= 1.0.3)
@@ -234,9 +278,11 @@ DEPENDENCIES
   libpng (= 1.0.0)
   libtool (= 1.0.0)
   module-data (= 0.0.3)
+  mplayerx (= 1.0.2)
   mysql (= 1.2.0)
   nginx (= 1.4.3)
   nodejs (= 3.7.0)
+  notational_velocity (= 1.1.0)
   onepassword (= 1.1.0)
   openssl (= 1.0.0)
   osx (= 2.5.0)
@@ -251,9 +297,11 @@ DEPENDENCIES
   redis (= 3.0.2)
   repository (= 2.3.0)
   ruby (= 8.0.3)
+  sequel_pro (= 1.0.1)
   sizeup (= 0.0.1)
   skype (= 1.0.8)
   slack (= 1.0.5)
+  spotify (= 1.0.1)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)
