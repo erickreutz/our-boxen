@@ -58,7 +58,7 @@ github "sudo",        "1.0.0"
 github "xquartz",     "1.1.1"
 github "redis",       "3.0.2"
 # github "postgresql",  "3.0.0"
-mod "postgresql", :repo => "git@github.com:erickreutz/puppet-postgresql.git", :ref => "8c039dc"
+github "postgresql", "8c039dc", :repo => "erickreutz/puppet-postgresql"
 github "sysctl",      "1.0.1"
 
 # Optional/custom modules. There are tons available at
