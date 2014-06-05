@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/erickreutz/puppet-postgresql.git
+  ref: 8c039dc
+  sha: 8c039dc212ae3d0e1bcaeddae4e2b3674ee2a509
+  specs:
+    postgresql (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
@@ -149,11 +156,6 @@ GITHUBTARBALL
     xquartz (1.1.1)
 
 GITHUBTARBALL
-  remote: erickreutz/puppet-postgresql
-  specs:
-    postgresql (3.0.1)
-
-GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
   specs:
     property_list_key (0.2.1)
@@ -196,7 +198,7 @@ DEPENDENCIES
   osx (= 2.5.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
-  postgresql (= 3.0.1)
+  postgresql (>= 0)
   property_list_key (= 0.2.1)
   rdio (= 1.0.0)
   redis (= 3.0.2)

@@ -60,6 +60,7 @@ node default {
   include redis
   include sysctl
   include postgresql
+  include mysql
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -76,6 +77,9 @@ node default {
   ruby::version { '2.0.0': }
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
+
+  # php
+  class { 'php::global': version => '5.4.10' }
 
   # common, useful packages
   package {

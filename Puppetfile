@@ -60,6 +60,8 @@ github "redis",       "3.0.2"
 # github "postgresql",  "3.0.0"
 mod "postgresql", :git => "https://github.com/erickreutz/puppet-postgresql.git", :ref => "8c039dc"
 github "sysctl",      "1.0.1"
+github "mysql",       "1.99.8"
+github "php",         "1.2.3"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
