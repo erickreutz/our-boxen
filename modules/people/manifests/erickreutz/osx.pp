@@ -108,7 +108,7 @@ class people::erickreutz::osx {
   }
 
   exec { "Disable shadow in screenshots":
-    command => defaults write com.apple.screencapture disable-shadow -bool true
+    command => "defaults write com.apple.screencapture disable-shadow -bool true"
   }
 
   exec { "Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons":
