@@ -99,11 +99,6 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-postgresql
-  specs:
-    postgresql (3.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-rdio
   specs:
     rdio (1.0.0)
@@ -152,6 +147,11 @@ GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.1)
+
+GITHUBTARBALL
+  remote: erickreutz/puppet-postgresql
+  specs:
+    postgresql (3.0.0)
 
 GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
