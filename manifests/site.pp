@@ -96,6 +96,11 @@ node default {
     ruby_version => '*',
   }
 
+  ruby_gem { 'git_remote_branch for all rubies':
+    gem          => 'git_remote_branch',
+    ruby_version => '*'
+  }
+
   # php
   # class { 'php::global': version => '5.5.9' }
 
