@@ -138,4 +138,7 @@ class people::erickreutz::osx {
   exec { "Finder: allow text selection in Quick Look":
     command => "defaults write com.apple.finder QLEnableTextSelection -bool true"
   }
+
+  include osx::finder
+  include osx::dock
 }
