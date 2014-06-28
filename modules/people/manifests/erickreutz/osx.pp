@@ -36,7 +36,7 @@ class people::erickreutz::osx {
     command => 'sudo scutil --set ComputerName "ericsmba.local" \
               && sudo scutil --set HostName "ericsmba.local" \
               && sudo scutil --set LocalHostName "ericsmba.local" \
-              && sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmba.local"',
+              && sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmba"',
     user => root
   }
 
