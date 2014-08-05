@@ -22,6 +22,7 @@ class people::erickreutz::applications {
   include chrome::canary
   include cloudapp
   include virtualbox
+  include dash
 
   $homebrew_packages = [
     'curl',
