@@ -20,6 +20,7 @@ class people::erickreutz::applications {
   include googledrive
   include chrome
   include chrome::canary
+  include cloudapp
 
   $homebrew_packages = [
     'curl',
