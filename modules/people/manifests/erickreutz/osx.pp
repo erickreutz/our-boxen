@@ -16,7 +16,11 @@ class people::erickreutz::osx {
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::no_network_dsstores
   include osx::software_update
-
+  
+  class { 'osx::dock::position':
+    position => 'left'
+  }
+  
   exec { "Disable the sound effects on boot":
     command => 'sudo nvram SystemAudioVolume=" "',
     user => root
