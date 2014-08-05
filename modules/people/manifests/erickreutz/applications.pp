@@ -21,6 +21,7 @@ class people::erickreutz::applications {
   include chrome
   include chrome::canary
   include cloudapp
+  include virtualbox
 
   $homebrew_packages = [
     'curl',
@@ -30,12 +31,6 @@ class people::erickreutz::applications {
 
   ## Declare all Homebrew packages at once
   package { $homebrew_packages: }
-
-  package { 'Virtualbox':
-    ensure => installed,
-    source => 'http://download.virtualbox.org/virtualbox/4.3.12/VirtualBox-4.3.12-93733-OSX.dmg',
-    provider => pkgdmg,
-  }
 
   package { 'Transmission':
     source   => 'https://transmission.cachefly.net/Transmission-2.83.dmg',
