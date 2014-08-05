@@ -72,7 +72,7 @@ github "php",         "1.2.4"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 github "atom",        "1.0.0"
-github "osx",         "2.5.0"
+github "osx",         "2.7.0"
 github "autojump",    "1.0.0"
 github "onepassword", "1.1.0"
 github "sizeup",      "0.0.1"
