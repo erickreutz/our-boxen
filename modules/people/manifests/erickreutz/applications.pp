@@ -21,10 +21,11 @@ class people::erickreutz::applications {
   include chrome
   include chrome::canary
   include firefox
-  include firefox::nightly
+  # include firefox::nightly
   include cloudapp
   include virtualbox
   include dash
+  include transmission
 
   $homebrew_packages = [
     'curl',
@@ -35,15 +36,10 @@ class people::erickreutz::applications {
   ## Declare all Homebrew packages at once
   package { $homebrew_packages: }
 
-  package { 'Transmission':
-    source   => 'https://transmission.cachefly.net/Transmission-2.83.dmg',
-    provider => appdmg
-  }
-
   heroku::plugin { 'accounts':
     source => 'ddollar/heroku-accounts'
   }
-  
+
   heroku::plugin { 'config':
     source => 'ddollar/heroku-config'
   }
