@@ -189,19 +189,19 @@ class people::erickreutz::osx {
   }
 
   exec { "Add a spacer to the left side of the Dock (where the applications are)":
-    command => "defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'"
+    command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   }
   
   exec { "Add a spacer to the left side of the Dock (where the applications are)":
-    command => "defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'"
+    command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   }
   
   exec { "Add a spacer to the left side of the Dock (where the applications are)":
-    command => "defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'"
+    command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   }
   
   exec { "Add a spacer to the left side of the Dock (where the applications are)":
-    command => "defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'"
+    command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   }
   
   exec { "Hide Spotlight tray-icon (and subsequent helper)":
