@@ -46,7 +46,7 @@ class people::erickreutz::osx {
   # Set computer name (as done via System Preferences → Sharing)
 
   exec { "Set computer name (as done via System Preferences → Sharing)":
-    command => 'sudo scutil --set ComputerName "ericsmbp.local" \
+    command => 'sudo scutil --set ComputerName "ericsmbp" \
               && sudo scutil --set HostName "ericsmbp.local" \
               && sudo scutil --set LocalHostName "ericsmbp" \
               && sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "ericsmbp"',
