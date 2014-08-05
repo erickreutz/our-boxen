@@ -92,5 +92,6 @@ github "notational_velocity", "1.1.0"
 github "caffeine",    "1.0.0"
 github "googledrive", "1.0.2"
 github "chrome",       "1.1.2"
+github "cloudapp",     "1.0.2"
 
 mod "property_list_key", "0.2.1", :github_tarball => "glarizza/puppet-property_list_key"
