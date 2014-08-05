@@ -45,6 +45,10 @@ class people::erickreutz::applications {
   heroku::plugin { 'accounts':
     source => 'ddollar/heroku-accounts'
   }
+  
+  heroku::plugin { 'config':
+    source => 'ddollar/heroku-config'
+  }
 
   iterm2::colors { 'Erics Colors':
     ansi_0_color        => [0.0, 0.0, 0.0],
