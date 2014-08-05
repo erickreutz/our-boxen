@@ -21,6 +21,15 @@ class people::erickreutz::osx {
     position => 'left'
   }
   
+  class { 'osx::dock::hot_corners':
+    top_left => "Start Screen Saver",
+    bottom_right => "Desktop"
+  }
+  
+  class { 'osx::sound::interface_sound_effects':
+    enable => false
+  }
+  
   exec { "Disable the sound effects on boot":
     command => 'sudo nvram SystemAudioVolume=" "',
     user => root
