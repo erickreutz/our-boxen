@@ -20,6 +20,8 @@ class people::erickreutz::applications {
   include googledrive
   include chrome
   include chrome::canary
+  include firefox
+  include firefox::nightly
   include cloudapp
   include virtualbox
   include dash
