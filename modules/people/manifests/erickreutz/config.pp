@@ -42,9 +42,9 @@ class people::erickreutz::config (
     value => "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
   }
 
-  git::config::global { 'core.excludesfile':
-    value => '~/.gitignore'
-  }
+  # git::config::global { 'core.excludesfile':
+    # value => '~/.gitignore'
+  # }
 
   git::config::global { 'core.quotepath':
     value => 'false'
