@@ -16,20 +16,20 @@ class people::erickreutz::osx {
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::no_network_dsstores
   include osx::software_update
-  
+
   class { 'osx::dock::position':
     position => 'left'
   }
-  
+
   class { 'osx::dock::hot_corners':
     top_left => "Start Screen Saver",
     bottom_right => "Desktop"
   }
-  
+
   class { 'osx::sound::interface_sound_effects':
     enable => false
   }
-  
+
   exec { "Disable the sound effects on boot":
     command => 'sudo nvram SystemAudioVolume=" "',
     user => root
@@ -151,7 +151,7 @@ class people::erickreutz::osx {
   exec { "Finder: allow text selection in Quick Look":
     command => "defaults write com.apple.finder QLEnableTextSelection -bool true"
   }
-  
+
   exec { "Display full POSIX path as Finder window title":
     command => "defaults write com.apple.finder _FXShowPosixPathInTitle -bool true"
   }
@@ -159,31 +159,31 @@ class people::erickreutz::osx {
   exec { "When performing a search, search the current folder by default":
     command => 'defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"'
   }
-  
+
   exec { "Disable the warning when changing a file extension":
     command => "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false"
   }
-  
+
   exec { "Enable spring loading for directories":
     command => "defaults write NSGlobalDomain com.apple.springing.enabled -bool true"
   }
-  
+
   exec { "Disable disk image verification":
     command => "defaults write com.apple.frameworks.diskimages skip-verify -bool true && defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true && defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true"
   }
-  
+
   exec { "Automatically open a new Finder window when a volume is mounted":
     command => "defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true && defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true && defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true"
   }
-  
+
   exec { "Disable Dashboard":
     command => "defaults write com.apple.dashboard mcx-disabled -bool true"
   }
-  
+
   exec { "Don’t show Dashboard as a Space":
     command => "defaults write com.apple.dock dashboard-in-overlay -bool true"
   }
-  
+
   exec { "Make Dock icons of hidden applications translucent":
     command => "defaults write com.apple.dock showhidden -bool true"
   }
@@ -191,29 +191,29 @@ class people::erickreutz::osx {
   # exec { "Add a spacer to the left side of the Dock (where the applications are)":
   #   command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   # }
-  
+
   # exec { "Add a spacer to the left side of the Dock (where the applications are)":
   #   command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   # }
-  
+
   # exec { "Add a spacer to the left side of the Dock (where the applications are)":
   #   command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   # }
-  
+
   # exec { "Add a spacer to the left side of the Dock (where the applications are)":
   #   command => 'defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}''
   # }
-  
+
   exec { "Hide Spotlight tray-icon (and subsequent helper)":
     command => "sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search"
   }
-  
+
   exec { "Prevent Time Machine from prompting to use new hard drives as backup volume":
     command => "defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true"
   }
 
-  exec { "Disable local Time Machine backups":
-    command => "hash tmutil &> /dev/null && sudo tmutil disablelocal"
-  }
-  
+  # exec { "Disable local Time Machine backups":
+  #  command => "hash tmutil &> /dev/null && sudo tmutil disablelocal"
+  # }
+
 }
