@@ -23,6 +23,45 @@ class people::erickreutz::config (
     require => Package['zsh'],
   }
 
+  # Git config
+  ####################################
+
+  git::config::global { 'user.name':
+    value  => 'Eric Kreutzer'
+  }
+
+  git::config::global { 'user.email':
+    value  => 'eric@airkrft.com'
+  }
+
+  git::config::global { 'github.user':
+    value  => 'erickreutz'
+  }
+
+  git::config::global { 'alias.lg':
+    value => "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+  }
+
+  git::config::global { 'core.excludesfile':
+    value => '~/.gitignore'
+  }
+
+  git::config::global { 'core.quotepath':
+    value => 'false'
+  }
+
+  git::config::global { 'core.whitespace':
+    value => 'trailing-space,space-before-tab'
+  }
+
+  git::config::global { 'push.default':
+    value => 'tracking'
+  }
+
+  git::config::global { 'heroku.account':
+    value => 'eric_airkrft'
+  }
+
   # Dotfiles
   ####################################
 
@@ -45,6 +84,13 @@ class people::erickreutz::config (
   file { "/Users/${my_username}/.atom":
     ensure  => link,
     target  => "${my_sourcedir}/dotfiles/atom",
+    require => Repository["${my_sourcedir}/dotfiles"],
+  }
+
+  file { "/Users/${my_username}/.gitignore":
+    ensure => link,
+    mode   => '0644',
+    target => "${my_sourcedir}/dotfiles/gitignore",
     require => Repository["${my_sourcedir}/dotfiles"],
   }
 
