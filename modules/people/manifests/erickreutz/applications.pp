@@ -24,7 +24,6 @@ class people::erickreutz::applications {
   # include firefox::nightly
   include cloudapp
   include virtualbox
-  include dash
   include transmission
 
   $homebrew_packages = [

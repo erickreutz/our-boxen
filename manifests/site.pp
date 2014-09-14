@@ -53,11 +53,8 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
   include git
   include hub
-  include nginx
-  include redis
   include sysctl
   include autoconf
   include libtool
@@ -65,8 +62,6 @@ node default {
   include pcre
   include libpng
   include wget
-  include postgresql
-  include mysql
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -81,7 +76,7 @@ node default {
   class { 'nodejs::global': version => 'v0.10.0' }
 
   nodejs::module { 'bower':
-    node_version => 'v0.10'
+    node_version => '*'
   }
 
   # default ruby versions
@@ -101,11 +96,17 @@ node default {
     ruby_version => '*'
   }
 
-  # php
-  # class { 'php::global': version => '5.5.9' }
-  # class { 'php::global':
-  #   version => '5.4.10'
-  # }
+  ruby_gem { 'foreman for all rubies':
+    gem          => 'foreman',
+    version      => '',
+    ruby_version => '*',
+  }
+
+  ruby_gem { 'middleman for all rubies':
+    gem          => 'middleman',
+    version      => '',
+    ruby_version => '*',
+  }
 
   # common, useful packages
   package {
