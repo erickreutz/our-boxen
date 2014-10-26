@@ -69,15 +69,15 @@ node default {
   }
 
   # node versions
-  include nodejs::v0_6
-  include nodejs::v0_8
+  # include nodejs::v0_6
+  # include nodejs::v0_8
   # include nodejs::v0_10
 
-  class { 'nodejs::global': version => 'v0.10.0' }
-
-  nodejs::module { 'bower':
-    node_version => '*'
-  }
+  # class { 'nodejs::global': version => 'v0.10.0' }
+  #
+  # nodejs::module { 'bower':
+  #   node_version => '*'
+  # }
 
   # default ruby versions
   ruby::version { '1.9.3': }
