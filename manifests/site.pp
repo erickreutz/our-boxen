@@ -100,13 +100,11 @@ node default {
 
   ruby_gem { 'foreman for all rubies':
     gem          => 'foreman',
-    version      => '',
     ruby_version => '*',
   }
 
   ruby_gem { 'middleman for all rubies':
     gem          => 'middleman',
-    version      => '',
     ruby_version => '*',
   }
 
