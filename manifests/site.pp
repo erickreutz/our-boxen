@@ -11,7 +11,7 @@ Exec {
     "${boxen::config::home}/rbenv/shims",
     "${boxen::config::home}/rbenv/bin",
     "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
-    "${boxen::config::home}/homebrew/bin",
+    "${boxen::config::homebrewdir}/bin",
     '/usr/bin',
     '/bin',
     '/usr/sbin',
@@ -68,16 +68,17 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  # node versions
-  # include nodejs::v0_6
-  # include nodejs::v0_8
-  # include nodejs::v0_10
+  nodejs::version { 'v0.10': }
+  nodejs::version { 'v0.12.4': }
+  class { 'nodejs::global': version => 'v0.12.4' }
 
-  # class { 'nodejs::global': version => 'v0.10.0' }
-  #
-  # nodejs::module { 'bower':
-  #   node_version => '*'
-  # }
+  nodejs::module { 'bower':
+    node_version => 'v0.12.4'
+  }
+
+  nodejs::module { 'ember-cli':
+    node_version => 'v0.12.4'
+  }
 
   # default ruby versions
   ruby::version { '1.9.3': }
