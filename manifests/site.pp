@@ -81,7 +81,6 @@ node default {
   }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
@@ -89,22 +88,25 @@ node default {
 
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
-    version      => '~> 1.5',
+    version      => '~> 1.10.2',
     ruby_version => '*',
   }
 
   ruby_gem { 'git_remote_branch for all rubies':
     gem          => 'git_remote_branch',
+    version      => '0.3.8',
     ruby_version => '*'
   }
 
   ruby_gem { 'foreman for all rubies':
     gem          => 'foreman',
+    version      => '0.78.0',
     ruby_version => '*',
   }
 
   ruby_gem { 'middleman for all rubies':
     gem          => 'middleman',
+    version      => '3.3.13',
     ruby_version => '*',
   }
 
