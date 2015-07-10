@@ -85,6 +85,7 @@ node default {
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
+  ruby::version { '2.2.2': }
 
   ruby_gem { 'bundler for all rubies':
     gem          => 'bundler',
