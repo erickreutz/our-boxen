@@ -68,18 +68,6 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
-  nodejs::version { 'v0.10': }
-  nodejs::version { 'v0.12.4': }
-  class { 'nodejs::global': version => 'v0.12.4' }
-
-  nodejs::module { 'bower':
-    node_version => 'v0.12.4'
-  }
-
-  nodejs::module { 'ember-cli':
-    node_version => 'v0.12.4'
-  }
-
   # default ruby versions
   ruby::version { '2.0.0': }
   ruby::version { '2.1.0': }
